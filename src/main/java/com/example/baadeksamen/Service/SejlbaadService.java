@@ -25,7 +25,6 @@ public class SejlbaadService {
   public Sejlbaad RetSejlBaad(Integer id, Sejlbaad nySejlBaad) {
     Sejlbaad gamSejlBaad = sejlBådRep.findById(id).orElseThrow();
     gamSejlBaad.setNavn(nySejlBaad.getNavn());
-    gamSejlBaad.setPoint(nySejlBaad.getPoint());
     gamSejlBaad.setBådtypeid(nySejlBaad.getBådtypeid());
     return sejlBådRep.save(nySejlBaad);
   }

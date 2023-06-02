@@ -46,6 +46,7 @@ public class BaadController {
 
   @GetMapping("/baadtype")
   public List<Baadtype> baadTyper() {
+     //baadtypeService.OpretBaadType();
    // System.out.println("hent typebåd");
     return baadtypeService.bådTypeRep.findAll();
   }

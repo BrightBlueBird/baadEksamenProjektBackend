@@ -3,21 +3,19 @@ package com.example.baadeksamen.Model;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.time.LocalDate;
 import java.util.Set;
 
-@Entity
 @Data
-public class BaadRaes {
+@Entity
+public class Deltager {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Integer id;
-  private LocalDate dato;
-
+  private int point;
   @ManyToOne
-  private Baadtype bådtypeid;
+  private Sejlbaad sejlbaad;
 
-  @ManyToOne
-  private Deltager deltager;
+  @OneToMany(mappedBy = "deltager", cascade = CascadeType.ALL)
+  private Set<BaadRaes> BaadRaes;
 
 }

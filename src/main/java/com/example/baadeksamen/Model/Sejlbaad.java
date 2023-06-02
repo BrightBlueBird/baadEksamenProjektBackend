@@ -13,8 +13,9 @@ public class Sejlbaad {
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Integer id;
   private String navn;
-  private int point;
 
+  @OneToMany(mappedBy = "sejlbaad", cascade = CascadeType.ALL)
+  private Set<Deltager> deltagere;
 
   @ManyToOne
   private Baadtype bådtypeid;
