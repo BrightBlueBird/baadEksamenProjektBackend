@@ -15,9 +15,9 @@ public class BaadtypeService {
     Baadtype lilleBaad = new Baadtype();
     Baadtype mellemBaad = new Baadtype();
     Baadtype storBaad = new Baadtype();
-    lilleBaad.setBaadType("Lille");
-    mellemBaad.setBaadType("Mellem");
-    storBaad.setBaadType("Stor");
+    lilleBaad.setBaadType(">25");
+    mellemBaad.setBaadType("25-40");
+    storBaad.setBaadType("<40");
     bådTypeRep.save(lilleBaad);
     bådTypeRep.save(mellemBaad);
     bådTypeRep.save(storBaad);
